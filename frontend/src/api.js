@@ -1,4 +1,4 @@
-const BASE = import.meta.env.VITE_API_URL || 'https://getto-dis5.onrender.com/' || '/api';
+const BASE = 'https://getto-dis5.onrender.com/' || import.meta.env.VITE_API_URL || '/api';
 
 async function request(path, { signal, method = 'GET', body } = {}) {
   const res = await fetch(BASE + path, {
