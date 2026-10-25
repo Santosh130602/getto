@@ -6,7 +6,7 @@ import catalogRoutes from './routes/catalog.js';
 import orderRoutes from './routes/orders.js';
 
 const app = express();
-app.use(cors({ origin: (process.env.CORS_ORIGIN || 'http://localhost:5173').split(',') }));
+app.use(cors({ origin: (process.env.CORS_ORIGIN || 'https://getto-ruby.vercel.app' || 'http://localhost:5173').split(',') }));
 app.use(express.json({ limit: '100kb' }));
 
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
